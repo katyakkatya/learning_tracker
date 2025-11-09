@@ -1,0 +1,15 @@
+body {
+    font-family: Verdana, sans-serif;
+    padding: 30px;
+    background-color: #edeae3;
+}
+
+.technologies-title {
+    margin-bottom: 20px;
+}
+
+.technologies-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

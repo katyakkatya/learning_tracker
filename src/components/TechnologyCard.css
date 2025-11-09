@@ -1,0 +1,17 @@
+.card {
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.card.completed {
+    background-color: #c2d6c6;
+}
+
+.card.in-progress {
+    background-color: #c6c2d6;
+}
+
+.card.not-started {
+    background-color: #d6c6c2;
+}
