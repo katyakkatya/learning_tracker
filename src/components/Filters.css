@@ -1,0 +1,22 @@
+.filter-btns {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.filter-btn {
+    padding: 10px;
+    border: solid #000 2px;
+    border-radius: 20px;
+    background-color: #b38fadff;
+    transition: background-color 0.3s ease;
+    transition: transform 0.1s ease-in;
+}
+
+.filter-btn:hover {
+    background-color: rgb(158, 117, 151);
+}
+
+.filter-btn:active {
+    transform: scale(0.97);
+}

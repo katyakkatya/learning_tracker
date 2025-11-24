@@ -1,0 +1,22 @@
+.quick-actions-btns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.quick-actions-btn {
+    padding: 5px;
+    border: solid #000 2px;
+    border-radius: 20px;
+    background-color: #b38fadff;
+    transition: background-color 0.3s ease;
+    transition: transform 0.1s ease-in;
+}
+
+.quick-actions-btn:hover {
+    background-color: rgb(158, 117, 151);
+}
+
+.quick-actions-btn:active {
+    transform: scale(0.97);
+}

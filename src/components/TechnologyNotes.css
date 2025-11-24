@@ -1,0 +1,18 @@
+.notes-title {
+    margin-block: 5px;
+    
+}
+
+.notes-textarea {
+    background-color: transparent;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    resize: vertical;
+    outline: none;
+}
+
+.notes-textarea:focus {
+    border: 2px solid #b38fadff;
+}

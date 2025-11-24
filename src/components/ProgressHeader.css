@@ -5,15 +5,16 @@
     padding: 20px;
     border: 2px solid black;
     border-radius: 10px;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
 }
 
 .progressbar-container {
-    height: 10px;
+    height: 15px;
     border: 2px solid black;
     border-radius: 10px;
 }
 
 .progressbar {
     border-radius: 10px;
+    transition: width 0.5s ease-in-out;
 }
