@@ -1,4 +1,4 @@
-const SearchQuery = ({ searchQuery, setSearchQuery, filterTechnologies }) => {
+const SearchQuery = ({ searchQuery, setSearchQuery }) => {
     return (
         <div className="search-box">
             <input
@@ -8,7 +8,7 @@ const SearchQuery = ({ searchQuery, setSearchQuery, filterTechnologies }) => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
             />
-            <span className="searched-info">Найдено: {searchQuery.length > 0 ? filterTechnologies.length : 0}</span>
+            {/* <span className="searched-info">Найдено: {searchQuery.length > 0 ? filterTechnologies.length : 0}</span> */}
         </div>
 
     )

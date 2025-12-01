@@ -1,16 +1,21 @@
 import TechnologyNotes from "./TechnologyNotes"
 
-const TechnologyCard = ({ title, description, status, clickStatus, notes, onNotesChange, techId }) => {
+const TechnologyCard = ({ id, technology, clickStatus, onNotesChange }) => {
+    
     return (
-        <div className={`card ${status}`} onClick={clickStatus}>
-            <h2 className="card-title">{title}</h2>
-            <p className="card-description">Описание: {description}</p>
-            <p className="card-status">Статус: {status}</p>
-            <div>
-                <TechnologyNotes notes={notes} onNotesChange={onNotesChange} techId={techId} />
-            </div>
+    <div className={`card ${technology.status}`} onClick={() => clickStatus(id)}>
+        <h2 className="card-title">{technology.title}</h2>
+        <p className="card-description">Описание: {technology.description}</p>
+        <p className="card-status">Статус: {technology.status}</p>
+        <div>
+          <TechnologyNotes
+            notes={technology.notes}
+            onNotesChange={onNotesChange}
+            techId={id}
+          />
         </div>
-    )
+      </div>
+    );
 }
 
 export default TechnologyCard
