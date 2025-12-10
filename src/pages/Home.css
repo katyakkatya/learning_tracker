@@ -1,0 +1,71 @@
+/* Home.css */
+
+.greeting-title {
+    margin: 20px 0;
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+
+.features {
+    background-color: #f8f6f0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e6e1d2;
+    margin: 20px 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.opportunities {
+    margin: 0 0 20px 0;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features li {
+    background-color: #edeae3;
+    margin: 10px 0;
+    padding: 15px 20px;
+    border-radius: 6px;
+    color: #333;
+    font-size: 1rem;
+    border-left: 4px solid #a3946d;
+}
+
+/* Десктопная версия */
+@media (min-width: 768px) {
+    .greeting-title {
+        font-size: 2.2rem;
+        padding: 25px;
+        margin: 25px 0 35px 0;
+    }
+
+    .features {
+        padding: 30px;
+        margin: 30px auto;
+    }
+
+    .opportunities {
+        font-size: 1.7rem;
+        margin-bottom: 25px;
+    }
+
+    .features li {
+        padding: 18px 25px;
+        font-size: 1.1rem;
+        margin: 12px 0;
+    }
+}

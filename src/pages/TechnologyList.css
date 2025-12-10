@@ -1,0 +1,243 @@
+/* TechnologyList.css */
+
+.page {
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+    padding: 20px;
+    background-color: #edeae3;
+    min-height: 100vh;
+}
+
+/* Заголовок страницы */
+.page-header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8f6f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e6e1d2;
+}
+
+.page-header h1 {
+    margin: 0;
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+/* Отступы между секциями */
+.content-section {
+    margin-bottom: 25px;
+}
+
+/* Фильтры */
+.filters-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8f6f0;
+    border-radius: 10px;
+    border: 1px solid #e6e1d2;
+}
+
+/* Список технологий */
+.technologies {
+    margin-top: 20px;
+}
+
+.technologies-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Кнопки */
+.btn {
+    text-decoration: none;
+    color: #333;
+    background-color: #daccaa;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #c8b992;
+}
+
+.btn-primary {
+    background-color: #a3946d;
+    color: #333;
+    font-weight: bold;
+    padding: 12px 25px;
+}
+
+.btn-primary:hover {
+    background-color: #8f8059;
+}
+
+/* Карточка технологии (если используете старый стиль) */
+.technology-item {
+    background-color: #f8f6f0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e6e1d2;
+    margin-bottom: 15px;
+}
+
+.technology-item h3 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.technology-item p {
+    margin: 0 0 15px 0;
+    color: #555;
+    line-height: 1.5;
+}
+
+.technology-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e0dbcc;
+}
+
+/* Статусы */
+.status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-new {
+    background-color: #e6f0f8;
+    color: #2c7cb0;
+    border: 1px solid #b8d4e6;
+}
+
+.status-in-progress {
+    background-color: #fff4e6;
+    color: #d88c00;
+    border: 1px solid #ffd8a6;
+}
+
+.status-completed {
+    background-color: #e6f7ed;
+    color: #27a764;
+    border: 1px solid #b8e6cc;
+}
+
+.status-archived {
+    background-color: #f0f0f0;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+/* Ссылки */
+.btn-link {
+    text-decoration: none;
+    color: #8f8059;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.btn-link:hover {
+    color: #726544;
+    text-decoration: underline;
+}
+
+/* Пустое состояние */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f8f6f0;
+    border-radius: 10px;
+    border: 2px dashed #daccaa;
+    margin-top: 30px;
+}
+
+.empty-state p {
+    margin: 0 0 25px 0;
+    color: #777;
+    font-size: 18px;
+}
+
+/* Десктопная версия */
+@media (min-width: 768px) {
+    .page {
+        padding: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .page-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 30px;
+        margin-bottom: 30px;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .content-section {
+        margin-bottom: 30px;
+    }
+
+    .filters-box {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 30px;
+        margin-bottom: 30px;
+    }
+
+    .technologies-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 25px;
+    }
+
+    .technology-item {
+        padding: 30px;
+    }
+
+    .empty-state {
+        padding: 80px 40px;
+    }
+
+    .empty-state p {
+        font-size: 20px;
+    }
+}
+
+/* Большие экраны */
+@media (min-width: 1200px) {
+    .technologies-container {
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+}

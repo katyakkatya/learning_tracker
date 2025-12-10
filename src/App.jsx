@@ -4,32 +4,34 @@ import QuickActions from "./components/QuickActions"
 import TechnologyCard from "./components/TechnologyCard"
 import SearchQuery from "./components/SearchQuery"
 //import { useState, useEffect } from 'react'
-import useTechnologies from "./useTechnologies"
+import Home from "./pages/Home";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Navigation from "./components/Navigation"
+import TechnologyList from "./pages/TechnologyList"
+import AddTechnology from "./pages/AddTechnology"
+import TechnologyDetail from "./pages/TechnologyDetail"
+
 
 
 const App = () => {
 
-  const {
-    technologies,
-    clickStatus,
-    updateTechnologyNotes,
-    setCurrentFilter,
-    setStatusComplete,
-    setStatusNotStarted,
-    setRandomInProgress,
-    filteredTechnologies,
-    progress,
-    searchQuery,
-    setSearchQuery,
-  } = useTechnologies();
+  // const {
+  //   technologies,
+  //   clickStatus,
+  //   updateTechnologyNotes,
+  //   setCurrentFilter,
+  //   setStatusComplete,
+  //   setStatusNotStarted,
+  //   setRandomInProgress,
+  //   filteredTechnologies,
+  //   progress,
+  //   searchQuery,
+  //   setSearchQuery,
+  // } = useTechnologies();
 
-    console.log("Все технологии:", technologies);
-    console.log("Отфильтрованные технологии:", filteredTechnologies);
-    console.log("Поисковый запрос:", searchQuery);
-    console.log("Прогресс:", progress);
   return (
     <>
-      <div className="header-box">
+      {/* <div className="header-box">
         <ProgressHeader
           total={technologies?.length || 0}
           done={
@@ -63,7 +65,19 @@ const App = () => {
             />
           </li>
         ))}
-      </ul>
+      </ul> */}
+      <Router>
+        <Navigation />
+        {/* Основное содержимое */}
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/TechnologyList.jsx" element={<TechnologyList />} />
+            <Route path="/AddTechnology.jsx" element={<AddTechnology />} />
+            <Route path="/technology/:techId" element={<TechnologyDetail />} />
+          </Routes>
+        </main>
+      </Router>
     </>
   );
 }
